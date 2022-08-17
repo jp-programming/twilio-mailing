@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <title>Cart</title>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <h1>Bienvenido <%- name %>!</h1>
+        <a href="/app">Home</a>
+        <button id="logoutBtn" >Logout</button>
+    </div>
+
+    <div class="cart">
+        <h1>Productos del carrito</h1>
+        <div class="cart-header">
+            <span>Producto</span>
+            <span>Precio</span>
+            <span>Cantidad</span>
+            <span>Subtotal</span>
+            <span>Eliminar</span>
+        </div>
+        <div class="cart-body" id="cart-items"></div>
+        <div class="cart-footer" id="cart-footer">
+            <span class="total" id="total"></span>
+            <button id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="../cart.js"></script>
+</body>
+</html>
